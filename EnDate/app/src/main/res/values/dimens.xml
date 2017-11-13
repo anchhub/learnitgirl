@@ -1,0 +1,13 @@
+
+<resources>
+    <!-- Height of each list item -->
+    <dimen name="list_item_height">100dp</dimen>
+
+    <!-- Padding of an item -->
+    <dimen name="item_padding_top">10dp</dimen>
+    <dimen name="item_padding_left">5dp</dimen>
+
+    <!-- Height of each textual part in a list item -->
+    <dimen name="title_height">40dp</dimen>
+    <dimen name="desc_height">130dp</dimen>
+</resources>
