@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EnDate</string>
+
+    <string name="product_name">Name of a product</string>
+    <string name="expiration_date">DD/MM/YYYY</string>
+    <string name="page_title">List of products</string>
+</resources>
