@@ -38,6 +38,10 @@ public class Product {
     public Date getExpirationDate() {
         return mExpirationDate;
     }
+    
+    public void setExpirationDate(Date date) {
+        mExpirationDate = date;
+    }
 
     public void setExpirationDate(Date date) {
         mExpirationDate = date;
