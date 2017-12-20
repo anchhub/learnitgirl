@@ -1,5 +1,8 @@
 package com.example.android.endate;
 
+import java.util.Date;
+import java.util.UUID;
+
 /**
  * @Product represents an item that contains basic information about a specific product.
  * It contains product's name and expiration date.
@@ -8,8 +11,9 @@ package com.example.android.endate;
 public class Product {
 
     private int mProductNameId;
-    private int mExpirationDate;
+    private Date mExpirationDate;
     private int mProductImageId;
+    private UUID mId;
 
     /**
      * Create a new Product object.
@@ -18,10 +22,12 @@ public class Product {
      * @expirationDate is the integer that stores a date
      */
 
-    public Product(int productNameId, int expirationDate, int productImageId) {
+    public Product(int productNameId, int productImageId) {
         mProductNameId = productNameId;
-        mExpirationDate = expirationDate;
+        mExpirationDate = new Date();
         mProductImageId = productImageId;
+        mId = UUID.randomUUID();
+
     }
 
     /**
@@ -36,8 +42,12 @@ public class Product {
      * Get the int for expiration date
      */
 
-    public int getExpirationDate() {
+    public Date getExpirationDate() {
         return mExpirationDate;
+    }
+    
+    public void setExpirationDate(Date date) {
+        mExpirationDate = date;
     }
 
     /**
@@ -46,4 +56,12 @@ public class Product {
     public int getProductImageId() {
         return mProductImageId;
     }
+
+    /*
+    * Gettter method for read-only mId.
+     */
+    public UUID getId() {
+        return mId;
+    }
+
 }
