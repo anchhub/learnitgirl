@@ -10,9 +10,8 @@ import java.util.UUID;
 
 public class Product {
 
-    private int mProductNameId;
+    private String mProductName;
     private Date mExpirationDate;
-    private int mProductImageId;
     private UUID mId;
 
     /**
@@ -22,25 +21,19 @@ public class Product {
      * @expirationDate is the integer that stores a date
      */
 
-    public Product(int productNameId, int productImageId) {
-        mProductNameId = productNameId;
+    public Product(String productName) {
+        mProductName = productName;
         mExpirationDate = new Date();
-        mProductImageId = productImageId;
         mId = UUID.randomUUID();
-
     }
 
-    /**
-     * Get the string res ID for the product's name
-     */
-
-    public int getProductNameId() {
-        return mProductNameId;
+    public String getProductName() {
+        return mProductName;
     }
 
-    /**
-     * Get the int for expiration date
-     */
+    public void setProductName(String name) {
+        mProductName = name;
+    }
 
     public Date getExpirationDate() {
         return mExpirationDate;
@@ -50,16 +43,10 @@ public class Product {
         mExpirationDate = date;
     }
 
-    /**
-     * Get the image red ID
-     */
-    public int getProductImageId() {
-        return mProductImageId;
+    public void setExpirationDate(Date date) {
+        mExpirationDate = date;
     }
 
-    /*
-    * Gettter method for read-only mId.
-     */
     public UUID getId() {
         return mId;
     }
