@@ -21,8 +21,7 @@ public class Product {
      * @expirationDate is the integer that stores a date
      */
 
-    public Product(String productName) {
-        mProductName = productName;
+    public Product() {
         mExpirationDate = new Date();
         mId = UUID.randomUUID();
     }
