@@ -4,4 +4,10 @@
     <string name="product_name">Name of a product</string>
     <string name="expiration_date">DD/MM/YYYY</string>
     <string name="page_title">List of products</string>
+    <string name="enter_info_hint">Please enter the name of your item</string>
+    <string name="product_details_label">Product details</string>
+    <string name="product_name_label">Product name</string>
+    <string name="date_picker_title">Product\'s expiration date:</string>
+    <string name="new_product">New Product</string>
+  
 </resources>
