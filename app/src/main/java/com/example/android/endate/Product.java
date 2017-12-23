@@ -42,10 +42,6 @@ public class Product {
         mExpirationDate = date;
     }
 
-    public void setExpirationDate(Date date) {
-        mExpirationDate = date;
-    }
-
     public UUID getId() {
         return mId;
     }

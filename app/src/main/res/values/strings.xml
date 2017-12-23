@@ -7,4 +7,5 @@
     <string name="enter_info_hint">Please enter the name of your item</string>
     <string name="product_details_label">Product details</string>
     <string name="product_name_label">Product name</string>
+    <string name="date_picker_title">Product\'s expiration date:</string>
 </resources>
