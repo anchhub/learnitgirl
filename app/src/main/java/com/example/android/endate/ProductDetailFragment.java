@@ -1,6 +1,5 @@
 package com.example.android.endate;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,10 +45,10 @@ public class ProductDetailFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState){
+                             Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_details, container, false);
 
-        mEnterNameField = (EditText)v.findViewById(R.id.add_product_title);
+        mEnterNameField = (EditText) v.findViewById(R.id.add_product_title);
         mEnterNameField.setText(mProduct.getProductName());
         mEnterNameField.addTextChangedListener(new TextWatcher() {
             @Override
@@ -68,7 +67,7 @@ public class ProductDetailFragment extends Fragment {
             }
         });
 
-        mDateButton = (Button)v.findViewById(R.id.add_product_expiration_date);
+        mDateButton = (Button) v.findViewById(R.id.add_product_expiration_date);
         updateDate();
         mDateButton.setOnClickListener(new View.OnClickListener() {
             @Override

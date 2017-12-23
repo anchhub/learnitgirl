@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProductListActivity" />
-        <activity android:name=".ProductPagerActivity" />
+        <activity android:name=".ProductPagerActivity"
+            android:parentActivityName=".ProductListActivity"/>
     </application>
 
 </manifest>

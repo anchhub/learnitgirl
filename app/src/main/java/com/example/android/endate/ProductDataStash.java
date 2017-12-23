@@ -20,11 +20,10 @@ public class ProductDataStash {
 
     private ProductDataStash (Context context) {
         mProducts = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            Product product = new Product();
-            product.setProductName("Product #" + i);
-            mProducts.add(product);
-        }
+    }
+
+    public void addProduct(Product p) {
+        mProducts.add(p);
     }
 
     public List<Product> getProducts() {

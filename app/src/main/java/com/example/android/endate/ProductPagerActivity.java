@@ -8,12 +8,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 
 import java.util.List;
 import java.util.UUID;
 
-public class ProductPagerActivity extends FragmentActivity {
+public class ProductPagerActivity extends AppCompatActivity {
 
     private static final String EXTRA_PRODUCT_ID = "com.example.android.endate.product_id";
 
