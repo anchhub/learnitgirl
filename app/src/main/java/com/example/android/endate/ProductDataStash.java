@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Created by Aleksandra on 22-Dec-17.
- */
 
 public class ProductDataStash {
     private static ProductDataStash sProductDataStash;
