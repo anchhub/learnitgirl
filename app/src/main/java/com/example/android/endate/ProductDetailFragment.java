@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -99,6 +100,7 @@ public class ProductDetailFragment extends Fragment {
     }
 
     private void updateDate() {
-        mDateButton.setText(mProduct.getExpirationDate().toString());
+        String formatDate = DateFormat.format("EEEE, MMM dd, yyyy", mProduct.getExpirationDate()).toString();
+        mDateButton.setText(formatDate);
     }
 }
