@@ -6,24 +6,27 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 /**
- * Created by Aleksandra on 20-Dec-17.
+ * Created by Aleksandra on 22-Dec-17.
  */
 
-public class ProductDetailActivity extends FragmentActivity {
+public abstract class SingleFragmentActivity extends FragmentActivity {
+
+    protected abstract Fragment createFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_detail);
+        setContentView(R.layout.activity_product);
 
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
 
         if (fragment == null) {
-            fragment = new ProductDetailFragment();
+            fragment = createFragment();
             fm.beginTransaction()
                     .add(R.id.fragment_container, fragment)
                     .commit();
         }
+
     }
 }
