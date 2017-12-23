@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -97,7 +98,8 @@ public class ProductListFragment extends Fragment {
         public void bindProduct(Product product) {
             mProduct = product;
             mProductNameTextView.setText(mProduct.getProductName());
-            mExpirationDateTextView.setText(mProduct.getExpirationDate().toString());
+            String formatDate = DateFormat.format("EEEE, MMM dd, yyyy", mProduct.getExpirationDate()).toString();
+            mExpirationDateTextView.setText(formatDate);
         }
 
         @Override
