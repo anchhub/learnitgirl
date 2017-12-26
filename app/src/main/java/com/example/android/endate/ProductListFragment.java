@@ -74,6 +74,7 @@ public class ProductListFragment extends Fragment {
             mAdapter = new ProductAdapter(products);
             mProductRecyclerView.setAdapter(mAdapter);
         } else {
+            mAdapter.setProducts(products);
             mAdapter.notifyDataSetChanged();
         }
     }
@@ -134,5 +135,11 @@ public class ProductListFragment extends Fragment {
         public int getItemCount() {
             return mProducts.size();
         }
+
+        public void setProducts(List<Product> products) {
+            mProducts = products;
+        }
     }
+
+
 }

@@ -45,6 +45,13 @@ public class ProductDetailFragment extends Fragment {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+
+        ProductDataStash.get(getActivity()).updateProduct(mProduct);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_details, container, false);
