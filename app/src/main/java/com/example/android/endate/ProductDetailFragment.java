@@ -9,10 +9,14 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Date;
 import java.util.UUID;
@@ -56,6 +60,7 @@ public class ProductDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_details, container, false);
 
+        setHasOptionsMenu(true);
         mEnterNameField = (EditText) v.findViewById(R.id.add_product_title);
         mEnterNameField.setText(mProduct.getProductName());
         mEnterNameField.addTextChangedListener(new TextWatcher() {
@@ -89,6 +94,32 @@ public class ProductDetailFragment extends Fragment {
         });
 
         return v;
+    }
+
+    private void deleteProduct() {
+        ProductDataStash productDataStash = ProductDataStash.get(getActivity());
+        ProductDataStash.deleteProduct(mProduct);
+
+        Toast.makeText(getActivity(), R.string.toast_delete_product, Toast.LENGTH_SHORT)
+                .show();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.fragment_product, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_item_delete_product:
+                deleteProduct();
+                getActivity().finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

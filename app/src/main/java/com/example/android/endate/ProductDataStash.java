@@ -15,11 +15,11 @@ import java.util.List;
 import java.util.UUID;
 
 
-public class ProductDataStash {
+class ProductDataStash {
 
     private static ProductDataStash sProductDataStash;
     private Context mContext;
-    private SQLiteDatabase mDatabase;
+    private static SQLiteDatabase mDatabase;
 
     public static ProductDataStash get(Context context){
         if (sProductDataStash == null) {
@@ -38,6 +38,14 @@ public class ProductDataStash {
         ContentValues values = getContentValues(p);
 
         mDatabase.insert(ProductTable.NAME, null, values);
+    }
+
+    public static void deleteProduct(Product product) {
+        mDatabase.delete(
+                ProductTable.NAME,
+                ProductTable.Cols.UUID + " = ?",
+                new String[] {product.getId().toString()}
+        );
     }
 
     public List<Product> getProducts() {
@@ -88,7 +96,7 @@ public class ProductDataStash {
         ContentValues values = new ContentValues();
         values.put(ProductTable.Cols.UUID, product.getId().toString());
         values.put(ProductTable.Cols.NAME, product.getProductName());
-        values.put(ProductTable.Cols.DATE, product.getExpirationDate().toString());
+        values.put(ProductTable.Cols.DATE, product.getExpirationDate().getTime());
 
         return values;
     }
