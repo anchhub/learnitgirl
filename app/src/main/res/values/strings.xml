@@ -9,5 +9,17 @@
     <string name="product_name_label">Product name</string>
     <string name="date_picker_title">Product\'s expiration date:</string>
     <string name="new_product">New Product</string>
-  
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <plurals name="subtitle_plural">
+               <item quantity="one">%1$s product</item>
+                <item quantity="other">%1$s products</item>
+            </plurals>
+
+    <string name="toast_delete_product">Product has been removed!</string>
+    <string name="delete_product">Remove product</string>
+
+    <!-- Empty List view -->
+    <string name="empty_view_text_view">There are no added products... yet!</string>
+      <string name="empty_view_add_button">Add a product</string>
 </resources>

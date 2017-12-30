@@ -10,8 +10,12 @@ public class Product {
     private UUID mId;
 
     public Product() {
+        this(UUID.randomUUID());
+    }
+
+    public Product(UUID id) {
+        mId = id;
         mExpirationDate = new Date();
-        mId = UUID.randomUUID();
     }
 
     public String getProductName() {
