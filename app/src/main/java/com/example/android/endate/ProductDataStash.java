@@ -34,7 +34,7 @@ class ProductDataStash {
                 .getWritableDatabase();
     }
 
-    public void addProduct(Product p) {
+    public static void addProduct(Product p) {
         ContentValues values = getContentValues(p);
 
         mDatabase.insert(ProductTable.NAME, null, values);

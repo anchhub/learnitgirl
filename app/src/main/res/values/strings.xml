@@ -18,6 +18,8 @@
 
     <string name="toast_delete_product">Product has been removed!</string>
     <string name="delete_product">Remove product</string>
+    <string name="add_product">Add product</string>
+    <string name="toast_add_product">Product has been added!</string>
 
     <!-- Empty List view -->
     <string name="empty_view_text_view">There are no added products... yet!</string>

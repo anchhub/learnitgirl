@@ -1,6 +1,7 @@
 package com.example.android.endate;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -51,7 +52,6 @@ public class ProductDetailFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-
         ProductDataStash.get(getActivity()).updateProduct(mProduct);
     }
 
@@ -71,6 +71,7 @@ public class ProductDetailFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
                 mProduct.setProductName(s.toString());
             }
 
@@ -104,6 +105,14 @@ public class ProductDetailFragment extends Fragment {
                 .show();
     }
 
+   /* public  void addNewProduct() {
+        ProductDataStash productDataStash = ProductDataStash.get(getActivity());
+        ProductDataStash.addProduct(mProduct);
+
+        Toast.makeText(getActivity(), R.string.toast_add_product, Toast.LENGTH_SHORT)
+                .show();
+    }*/
+
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
@@ -115,6 +124,10 @@ public class ProductDetailFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.menu_item_delete_product:
                 deleteProduct();
+                getActivity().finish();
+                return true;
+            case R.id.menu_item_add_product:
+               // addNewProduct();
                 getActivity().finish();
                 return true;
             default:

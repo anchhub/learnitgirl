@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
 
     <TextView
-        android:text="@string/product_name_label"
+        style="?android:listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="?android:listSeparatorTextViewStyle"/>
+        android:layout_margin="@dimen/title_margin"
+        android:text="@string/product_name_label" />
 
     <EditText
         android:id="@+id/add_product_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_info_hint"/>
+        android:layout_margin="@dimen/title_margin"
+        android:inputType="text"
+        android:hint="@string/enter_info_hint" />
 
     <TextView
-        android:text="@string/product_details_label"
+        style="?android:listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="?android:listSeparatorTextViewStyle"/>
+        android:layout_margin="@dimen/title_margin"
+
+        android:text="@string/product_details_label" />
 
     <Button
         android:id="@+id/add_product_expiration_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin" />
 
 </LinearLayout>

@@ -71,8 +71,6 @@ public class ProductListFragment extends Fragment {
         outState.putBoolean(SAVED_SUBTITLE_VISIBLE, mSubtitleVisible);
     }
 
-
-
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
@@ -202,6 +200,7 @@ public class ProductListFragment extends Fragment {
         Intent intent = ProductPagerActivity
                 .newIntent(getActivity(), product.getId());
         startActivity(intent);
+
     }
 
 }

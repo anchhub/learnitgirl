@@ -20,6 +20,8 @@ public class ProductPagerActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private List<Product> mProducts;
 
+
+
     public static Intent newIntent(Context packageContext, UUID productId) {
         Intent intent = new Intent(packageContext, ProductPagerActivity.class);
         intent.putExtra(EXTRA_PRODUCT_ID, productId);
