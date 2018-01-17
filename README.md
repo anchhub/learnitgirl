@@ -15,3 +15,12 @@ EnDate allows users to keep track of the products they are using.
 * When adding a new product, user enters its name and picks expiration date from a calendar
 * List items can be edited or deleted
 * User is able to swipe between the items (once the detail view is open)
+* By pressing the Show Subtitle menu option, user can see the total number of items, writen below the app's title
+
+![alt text](screenshots/emptyscreen.png "Empty list")
+
+![alt text](screenshots/detailview.png "Detail View")
+
+![alt text](screenshots/addnewitem.png "Add new item to the list")
+
+![alt text](screenshots/listwithsubtitle.png "List with shown subtitle")
