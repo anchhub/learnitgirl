@@ -17,10 +17,16 @@ EnDate allows users to keep track of the products they are using.
 * User is able to swipe between the items (once the detail view is open)
 * By pressing the Show Subtitle menu option, user can see the total number of items, writen below the app's title
 
+## Empty screen
+* When the list is empty, user can add a new item by tapping on the button in the centre of the screen
 ![alt text](screenshots/emptyscreen.png "Empty list")
 
+## Detail view
+* To add a new item, user enters name and selects the date by tapping the button that opens Date picker
 ![alt text](screenshots/detailview.png "Detail View")
 
 ![alt text](screenshots/addnewitem.png "Add new item to the list")
 
+## List with shown counter
+* User can tap on Show/Hide subtitle menu button to reveal list item counter below the app's title
 ![alt text](screenshots/listwithsubtitle.png "List with shown subtitle")
