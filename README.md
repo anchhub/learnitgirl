@@ -9,6 +9,8 @@ People usually don't think about expiration dates when they start using new prod
 
 EnDate allows users to keep track of the products they are using. 
 
+You can find EnDate presentation >>> [HERE](https://docs.google.com/presentation/d/1sKBgKf5QJlrPlzrgwIbPBECHBAUP_DNgkk2EoaD7IBg/edit?usp=sharing)
+
 ## Features:
 
 * User can add a new product to the list
